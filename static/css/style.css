@@ -1,0 +1,56 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header h1 {
+    color: #4a3b31; /* Coffee-themed color */
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #6f4e37; /* Another coffee color */
+    border-color: #6f4e37;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5a3f2e;
+    border-color: #5a3f2e;
+}
+
+#predictedRating {
+    font-weight: bold;
+    color: #c87e4f; /* Accent color */
+}
+
+.similar-coffee-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+}
+.similar-coffee-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.similar-coffee-card h6 {
+    color: #4a3b31;
+}
+.similarity-score {
+    font-size: 0.9em;
+    color: #777;
+}
