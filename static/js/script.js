@@ -47,13 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 similarCoffeesListEl.innerHTML = ''; // Clear previous results
                 if (data.similar_coffees && data.similar_coffees.length > 0) {
                     data.similar_coffees.forEach(coffee => {
+                        console.log(coffee);
                         const coffeeDiv = document.createElement('div');
                         coffeeDiv.className = 'col-md-6 mb-3'; // Bootstrap column
                         coffeeDiv.innerHTML = `
                             <div class="similar-coffee-card h-100">
                                 <h6>${escapeHTML(coffee.name)}</h6>
-                                <p><small><em>Notes: ${escapeHTML(coffee.notes.substring(0,100))}...</em></small></p>
-                                <p class="similarity-score">Similarity: ${(coffee.similarity_score * 100).toFixed(1)}%</p>
+                                <p><small><em>Notes: ${escapeHTML(coffee.notes)}</em></small></p>
+                                <p class="similarity-score">Similarity: ${coffee.similarity}%</p>
+                                <p class="similarity-score">Rating: ${coffee.rating}</p>
                             </div>
                         `;
                         similarCoffeesListEl.appendChild(coffeeDiv);
